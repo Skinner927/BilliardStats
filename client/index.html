@@ -10,7 +10,7 @@
   <script src="./assets/js/routes.js"></script>
   <script src="./assets/js/app.js"></script>
 </head>
-<body ng-app="billiardStats">
+<body ng-app="billiardStats" zf-esc-close>
 
 <div class="grid-frame vertical">
 
@@ -39,13 +39,25 @@
   <div class="grid-block">
 
     <!-- sideBar -->
-    <zf-panel position="left" id="side-bar"
+    <zf-panel position="left" id="side-bar" zf-swipe-close="left"
               class="panel-fixed medium-grid-block collapse medium-3 large-2 vertical">
-      <ul class="menu-bar vertical">
-        <li><a href="#">Item</a></li>
-        <li><a href="#">Item</a></li>
-        <li><a href="#">Item</a></li>
-      </ul>
+
+      <div class="title-bar dark shrink show-for-small-only" zf-close>
+        <span class="left">
+            <span class="badge dark"><!-- match sizing of #title-bar -->
+              <i class="fa fa-arrow-left"></i>
+            </span>
+        </span>
+      </div>
+
+      <section class="block-list">
+        <header>Navigation</header>
+        <ul>
+          <li><a href="#">Menu Item 1</a></li>
+          <li class="with-chevron"><a href="#">Menu Item 2</a></li>
+          <li><a href="#">Menu Item 3</a></li>
+        </ul>
+      </section>
     </zf-panel>
     <!-- /sideBar -->
 

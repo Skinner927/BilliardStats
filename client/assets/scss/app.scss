@@ -5,6 +5,9 @@
 .nopadding {
   padding: 0;
 }
+.nomargin {
+  margin: 0;
+}
 
 .bold {
   font-weight: bold;
@@ -22,6 +25,10 @@
   a span {
     font-size: 1em !important;
   }
+
+  i {
+    line-height: normal;
+  }
 }
 
 #side-bar {
@@ -30,6 +37,21 @@
     $background: $panel-background
   );
   box-shadow: $panel-shadow;
+
+  section.block-list {
+    background-color: $body-background;
+    margin: 0 0 1em 0;
+
+    // fix for small screens
+    header {
+      margin-top: 0;
+      padding-top: 1em;
+    }
+
+    ul {
+      margin: 0;
+    }
+  }
 }
 
 
