@@ -1,5 +1,8 @@
 # JS
 node_modules
+npm-debug.log
+build
+.sass-cache
 
 # config
 config.ini

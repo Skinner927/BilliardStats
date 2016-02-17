@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Billiard Stats</title>
+  <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+  <script src="./assets/js/foundation.js"></script>
+  <script src="./assets/js/templates.js"></script>
+  <script src="./assets/js/routes.js"></script>
+  <script src="./assets/js/app.js"></script>
+</head>
+<body ng-app="billiardStats">
+
+<div class="grid-frame vertical">
+
+  <!-- topBar -->
+  <div class="grid-block shrink">
+    <div class="grid-content nopadding">
+      <div class="primary title-bar">
+        <div class="center title" zf-close-all>Billiard Stats</div>
+          <span class="left">
+            <a zf-open="side-bar" class="show-for-small-only" href="#">
+              <i class="fa fa-bars"></i>
+            </a>
+          </span>
+        <span class="right" zf-close-all><a href="#">New Game <i class="fa fa-plus-circle"></i></a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- /topBar -->
+
+  <!-- main -->
+  <div class="grid-block">
+
+    <!-- sideBar -->
+    <zf-panel position="left" id="side-bar"
+              class="panel-fixed medium-grid-block collapse medium-3 large-3 vertical"
+              style="background:purple">
+      <ul class="menu-bar vertical">
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+      </ul>
+    </zf-panel>
+    <!-- /sideBar -->
+
+    <!-- content -->
+    <div class="grid-block" zf-close-all>
+      <div ui-view class="grid-content">Main body</div>
+    </div>
+    <!-- /content -->
+
+  </div>
+  <!-- .main -->
+
+</div>
+
+</body>
+</html>
