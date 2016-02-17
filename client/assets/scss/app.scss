@@ -1,8 +1,37 @@
 @import "settings";
-@import "foundation";
+@import "foundation.scss";
 @import "font-awesome.scss";
-
 
 .nopadding {
   padding: 0;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+
+.label.secondary {
+  background: $secondary-color;
+}
+
+#title-bar {
+  box-shadow: 0 2px 8px $gray;
+  border: 0;
+
+  a span {
+    font-size: 1em !important;
+  }
+}
+
+#side-bar {
+  @include panel-style(
+    $padding: 0,
+    $background: $panel-background
+  );
+  box-shadow: $panel-shadow;
+}
+
+
+
+

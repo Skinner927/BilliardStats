@@ -91,23 +91,27 @@ $font-weight-bold: bold;
 
 // We use these to control various global styles
 $body-background: #fff;
-$body-font-color: #222;
+$body-font-color: #212121;
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 $body-antialiased: true;
 
 // Application Colors
-$primary-color: #00558b;
-$secondary-color: #f1f1f1;
-$alert-color: #F04124;
-$info-color: #A0D3E8;
-$success-color: #43AC6A;
-$warning-color: #F08A24;
-$dark-color: #232323;
-$gray: #dfdfdf;
+// https://www.materialpalette.com/deep-purple/teal
+$primary-color: #673AB7;
+$primary-light: #D1C4E9;
+$secondary-color: #009688;
+$alert-color: #F44336;
+$info-color: #2196F3;
+$success-color: #00BFA5;
+$warning-color: #FF9800;
+$dark-color: #512DA8;
+$gray: #727272;
 $gray-dark: darken($gray, 8);
-$gray-light: lighten($gray, 8);
+//$gray-dark: #212121;
+//$gray-light: lighten($gray, 8);
+$gray-light: #B6B6B6;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 4px;
@@ -115,7 +119,7 @@ $gray-light: lighten($gray, 8);
 
 // We use this for default spacing
 // $global-padding: 1rem;
-// $global-spacing: rem-calc(15); 
+// $global-spacing: rem-calc(15);
 
 // 3. Breakpoints
 // - - - - - - - - - - - - - - -
@@ -228,7 +232,7 @@ $gray-light: lighten($gray, 8);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
-// $acronym-underline: 1px dotted #ddd; 
+// $acronym-underline: 1px dotted #ddd;
 
 // 5. Grid
 // - - - - - - - - - - - - - - -
@@ -236,7 +240,7 @@ $gray-light: lighten($gray, 8);
 // $container-width: rem-calc(900);
 // $block-padding: $global-padding;
 // $total-columns: 12;
-// $block-grid-max-size: 6; 
+// $block-grid-max-size: 6;
 
 // 6. Button
 // - - - - - - - - - - - - - - -
@@ -255,7 +259,7 @@ $gray-light: lighten($gray, 8);
 // );
 // $button-font-size: 0.9rem;
 // $button-opacity-disabled: 0.5;
-// $button-tag-selector: false; 
+$button-tag-selector: true;
 
 // 7. Accordion
 // - - - - - - - - - - - - - - -
@@ -546,9 +550,9 @@ $gray-light: lighten($gray, 8);
 // $panel-size-vertical: 300px;
 // $panel-padding: 0;
 
-// $panel-background: #fff;
-// $panel-shadow: 3px 0 10px rgba(black, 0.25);
-// $panel-animation-speed: 0.25s; 
+$panel-background: $primary-light;
+$panel-shadow: 2px 0 8px $gray;
+$panel-animation-speed: 0.25s;
 
 // 22. Popup
 // - - - - - - - - - - - - - - -
