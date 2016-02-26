@@ -150,15 +150,27 @@ gulp.task('uglify:app', function() {
   ;
 });
 
+// starts the flask api server
+gulp.task('flask', function(){
+  var virtualenv = require("virtualenv");
+  var packagePath = require.resolve("./package.json")
+  var env = virtualenv(packagePath);
+
+  env.spawnPython(["./run.py"])
+});
+
 // Starts a test server, which you can view at http://localhost:8079
-gulp.task('server', ['build'], function() {
+gulp.task('server', ['build', 'flask'], function() {
   gulp.src('./build')
     .pipe($.webserver({
       port: 8079,
       host: 'localhost',
       fallback: 'index.html',
       livereload: true,
-      open: true
+      open: true,
+      proxies: [
+        { source: '/api', target: 'http://localhost:5000/api' }
+      ]
     }))
   ;
 });
