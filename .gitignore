@@ -1,11 +1,15 @@
 # JS
 node_modules
 npm-debug.log
-build
+dist/
 .sass-cache
 .node-virtualenv
+.tmp
+.git
+.settings
+*.log
 
-# config
+# API
 config.ini
 BilliardStats/data.db
 BilliardStats/log.log

@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Billiard Stats</title>
-  <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
-  <script src="./assets/js/foundation.js"></script>
-  <script src="./assets/js/templates.js"></script>
-  <script src="./assets/js/routes.js"></script>
-  <script src="./assets/js/app.js"></script>
-</head>
-<body ng-app="billiardStats" zf-esc-close>
+  <head>
+    <meta charset="utf-8">
+    <title>NG6-Starter by @AngularClass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="NG6-Starter by @AngularClass">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <base href="/">
+  </head>
+  <body ng-app="app" ng-strict-di ng-cloak>
 
-<div class="grid-frame vertical">
+  <div class="grid-frame vertical">
 
-  <!-- topBar -->
-  <div class="primary title-bar shrink" id="title-bar">
-    <div class="center title" zf-close-all>Billiard Stats</div>
+    <!-- topBar -->
+    <div class="primary title-bar shrink" id="title-bar">
+      <div class="center title" zf-close-all>Billiard Stats</div>
     <span class="left">
       <a zf-open="side-bar" class="show-for-small-only" href="#">
         <i class="fa fa-bars"></i>
@@ -32,45 +33,44 @@
         </span>
       </a>
     </span>
-  </div>
-  <!-- /topBar -->
+    </div>
+    <!-- /topBar -->
 
-  <!-- main -->
-  <div class="grid-block">
+    <!-- main -->
+    <div class="grid-block">
 
-    <!-- sideBar -->
-    <zf-panel position="left" id="side-bar" zf-swipe-close="left"
-              class="panel-fixed medium-grid-block collapse medium-3 large-2 vertical">
+      <!-- sideBar -->
+      <zf-panel position="left" id="side-bar" zf-swipe-close="left"
+                class="panel-fixed medium-grid-block collapse medium-3 large-2 vertical">
 
-      <div class="title-bar dark shrink show-for-small-only" zf-close>
+        <div class="title-bar dark shrink show-for-small-only" zf-close>
         <span class="left">
             <span class="badge dark"><!-- match sizing of #title-bar -->
               <i class="fa fa-arrow-left"></i>
             </span>
         </span>
+        </div>
+
+        <section class="block-list">
+          <header>Navigation</header>
+          <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li class="with-chevron"><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+          </ul>
+        </section>
+      </zf-panel>
+      <!-- /sideBar -->
+
+      <!-- content -->
+      <div class="grid-block" zf-close-all>
+        <div ui-view class="grid-content">Main body</div>
       </div>
+      <!-- /content -->
 
-      <section class="block-list">
-        <header>Navigation</header>
-        <ul>
-          <li><a href="#">Menu Item 1</a></li>
-          <li class="with-chevron"><a href="#">Menu Item 2</a></li>
-          <li><a href="#">Menu Item 3</a></li>
-        </ul>
-      </section>
-    </zf-panel>
-    <!-- /sideBar -->
-
-    <!-- content -->
-    <div class="grid-block" zf-close-all>
-      <div ui-view class="grid-content">Main body</div>
     </div>
-    <!-- /content -->
+    <!-- .main -->
 
-  </div>
-  <!-- .main -->
 
-</div>
-
-</body>
+  </body>
 </html>
