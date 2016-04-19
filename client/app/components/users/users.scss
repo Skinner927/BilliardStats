@@ -1,0 +1,18 @@
+@import "settings";
+@import "foundation";
+
+.user-card {
+  .title {
+    @include card-section();
+    text-align: center;
+    background: $secondary-color;
+    color: $primary-color-text;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  .card-divider > div {
+    text-align: center;
+  }
+}

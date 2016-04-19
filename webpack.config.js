@@ -2,6 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// Beautiful example for loading modules & shimming
+// https://github.com/webpack/webpack/issues/192
+
 module.exports = {
   devtool: 'sourcemap',
   entry: {},
@@ -30,8 +33,18 @@ module.exports = {
   },
   sassLoader: {
     includePaths: [
-      path.resolve(__dirname, "./node_modules/foundation-apps/scss/")
+      path.resolve(__dirname, "./client/app"),
+      path.resolve(__dirname, "./node_modules/foundation-apps/scss"),
+      path.resolve(__dirname, "./node_modules/font-awesome/scss")
     ]
+  },
+  resolve: {
+    alias: {
+      //angular: path.resolve(__dirname, './node_modules/angular/angular.js')
+      //jquery: path.resolve(__dirname, './node_modules/jquery/dist/jquery.js')
+      //underscore: path.resolve(__dirname, './node_modules/underscore/underscore.js')
+      //restangular: path.resolve(__dirname, './node_modules/restangular/dist/restangular.js')
+    }
   },
   plugins: [
     // Injects bundles in your index.html instead of wiring all manually.
@@ -50,6 +63,13 @@ module.exports = {
       minChunks: function(module, count) {
         return module.resource && module.resource.indexOf(path.resolve(__dirname, 'client')) === -1;
       }
+    }),
+
+    // Load these guys automatically into each module
+    new webpack.ProvidePlugin({
+      _: 'lodash',
+      //$: 'jquery',
+      //jQuery: 'jquery'
     })
   ]
 };

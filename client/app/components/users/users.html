@@ -1,0 +1,39 @@
+<h4>Users Component!</h4>
+
+<div class="grid-block small-up-1 medium-up-3">
+
+  <div class="grid-content" ng-repeat="user in $ctrl.users">
+
+    <div class="card user-card" >
+      <div class="title">
+        {{user.name}}
+      </div>
+      <div class="card-divider grid-block bold">
+        <div class="grid-content">
+          Wins <i class="fa fa-trophy fa-lg"></i> {{user.wins.length}}
+        </div>
+        <div class="grid-content">
+          Losses <i class="fa fa-times fa-lg"></i> {{user.losses.length}}
+        </div>
+      </div>
+      <div class="card-section">
+
+        <dl>
+          <dt>Nemesis</dt>
+          <dd>{{user.nemesis.name}}</dd>
+        </dl>
+
+        <dl>
+          <dt>Dominated</dt>
+          <dd>{{user.dominated.name}}</dd>
+        </dl>
+
+        <!-- -->
+        <h4>Look at This Swag Card</h4>
+        <pre>{{user | json}}</pre>
+      </div>
+    </div>
+
+  </div>
+
+</div>

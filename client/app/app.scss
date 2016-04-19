@@ -1,5 +1,5 @@
 @import "settings";
-@import "foundation.scss";
+@import "foundation";
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 //@import "common/common";
@@ -36,7 +36,7 @@ $fa-font-path: "~font-awesome/fonts";
 #side-bar {
   @include panel-style(
     $padding: 0,
-    $background: $panel-background
+    $background: smartscale($body-background, 6%)
   );
   box-shadow: $panel-shadow;
 
